@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
   5.상품 썸네일 클릭 >
     1)로그인이 안되어있는 경우
       로그인 페이지가 나옴
-    2)로그인이 되어있는 경우
+    2)로그인이 되어있는 경우MODULE_NOT_FOUND
       디테일 페이지가 나옴
   6.로그아웃 기능
     1)다시 디테일페이지x
