@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
 // 변수설정
 :root {
 	--color-point: #c81e2b;
 	--color-gray: #666;
 }
 
+body {
+	font-family: "Noto Sans KR", sans-serif;
+}
 * {
 	margin: 0;
 	padding: 0;

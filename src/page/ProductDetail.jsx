@@ -28,7 +28,7 @@ export default function ProductDetail(item) {
 		<Container>
 			<Row>
 				<Col xs={12} sm={7}>
-					<img className="detailImg" src={product?.img} alt="" />
+					<img className="detailImg" src={product?.img2} alt="" />
 				</Col>
 				<Col xs={12} sm={{ span: 4, offset: 1 }}>
 					<div className="detailTitleWrap">
