@@ -7,7 +7,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 
