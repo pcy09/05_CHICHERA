@@ -1,0 +1,44 @@
+.detailImg {
+	width: 100%;
+}
+.detailTitleWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	.detailTitle {
+		font-weight: bold;
+	}
+	span.like {
+		cursor: pointer;
+		.heartFill {
+			fill: var(--color-point);
+		}
+	}
+}
+
+.detailPrice {
+	font-size: 20px;
+}
+.new {
+	margin-top: 30px;
+	color: var(--color-gray);
+}
+.choice {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.detailDropdown {
+	margin-bottom: 20px;
+	& > * {
+		width: 100%;
+	}
+}
+button {
+	width: 100%;
+}
+.btn:hover {
+	color: inherit;
+	background-color: inherit;
+	border-color: inherit;
+}
