@@ -18,8 +18,7 @@ export default function ProductAll() {
 	const getProducts = async () => {
 		let keyword = query.get("q") || "";
 		// 쿼리값을 읽어 온다 / q의 밸류(아이템을 가져온다) / 없을땐 빈 스트링
-		let url = `https://my-json-server.typicode.com/pcy09/
-    05_SPA01/test?q=${keyword}`;
+		let url = `https://my-json-server.typicode.com/pcy09/05_SPA01/products?q=${keyword}`;
 		let response = await fetch(url); //fetch - 네트워크에 요청을 보내고 프로미스 객체가 반환
 		let data = await response.json(); //사용할 수 있도록 json파일로 만들기
 		setProductList(data);

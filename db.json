@@ -2,7 +2,7 @@
 	"products": [
 		{
 			"id": 0,
-			"img": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F01%2F3a%2F013a18bb2dd2eb00db57f1f17f1463a91169bf10.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+			"img": "https://image.wconcept.co.kr/productimg/image/img0/15/302170015_IR59110.jpg",
 			"title": "리브니트 가디건",
 			"price": 18900,
 			"choice": true,
@@ -134,17 +134,6 @@
 			"choice": false,
 			"new": false,
 			"size": ["XS", "S", "M", "L", "XL"]
-		}
-	],
-	"test": [
-		{
-			"id": 1,
-			"img": "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F27%2Fe9%2F27e9508c086ccdf2c51fd13585aa2b20eaf2c3d1.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
-			"title": "니트 스웨터",
-			"price": 17900,
-			"choice": true,
-			"new": true,
-			"size": ["S", "M", "L"]
 		}
 	]
 }

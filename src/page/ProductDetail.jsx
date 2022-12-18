@@ -16,7 +16,7 @@ export default function ProductDetail(item) {
 
 	let { id } = useParams();
 	const getProductDetail = async () => {
-		let url = `https://my-json-server.typicode.com/pcy09/hnm/products/${id}`;
+		let url = `https://my-json-server.typicode.com/pcy09/05_SPA01/products/${id}`;
 		let response = await fetch(url); //fetch - 네트워크에 요청을 보내고 프로미스 객체가 반환
 		let data = await response.json(); //사용할 수 있도록 json파일로 만들기
 		setProduct(data);
