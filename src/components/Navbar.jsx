@@ -62,24 +62,35 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 					}}
 				/>
 			</div>
-			<div className="login_btnWrap">
-				{authenticate ? (
-					<div className="login_btn" onClick={gotoLogout}>
-						<BsPersonCircle />
-						<span>로그아웃</span>
-					</div>
-				) : (
-					<div className="login_btn" onClick={gotoLogin}>
-						<BsPersonCircle />
-						<span>로그인</span>
-					</div>
-				)}
+			<div className="headerWrap">
+				<h1>
+					<Link to="/">
+						<img src="../img/logo.png" alt="chichera 로고" />
+					</Link>
+				</h1>
+				<div className="search">
+					<input
+						type="text"
+						onKeyPress={(event) => {
+							search(event);
+						}}
+					/>
+					<BsSearch />
+				</div>
+				<div className="login_btnWrap">
+					{authenticate ? (
+						<div className="login_btn" onClick={gotoLogout}>
+							<BsPersonCircle />
+							<span>LOGOUT</span>
+						</div>
+					) : (
+						<div className="login_btn" onClick={gotoLogin}>
+							<BsPersonCircle />
+							<span>LOGIN</span>
+						</div>
+					)}
+				</div>
 			</div>
-			<h1>
-				<Link to="/">
-					<img src="../img/logo.png" alt="H&M 로고" />
-				</Link>
-			</h1>
 
 			<nav>
 				<ul className="menuList">
@@ -87,16 +98,6 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 						<li>{menu}</li>
 					))}
 				</ul>
-				<div className="search">
-					<BsSearch />
-					<input
-						type="text"
-						placeholder="제품 검색"
-						onKeyPress={(event) => {
-							search(event);
-						}}
-					/>
-				</div>
 			</nav>
 		</div>
 	);
