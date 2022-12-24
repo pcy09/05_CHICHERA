@@ -9,8 +9,28 @@ import { VscThreeBars, VscClose } from "react-icons/vsc";
 export default function Navbar({ authenticate, setAuthenticate }) {
 	const [sideState, setSideState] = useState("-105%");
 	const navigate = useNavigate();
-	const menuList = ["NEW", "BEST", "TOP", "BOTTOM", "원피스"];
-
+	const menuList = [
+		{
+			id: 0,
+			title: "NEW",
+		},
+		{
+			id: 1,
+			title: "BEST",
+		},
+		{
+			id: 2,
+			title: "TOP",
+		},
+		{
+			id: 3,
+			title: "BOTTOM",
+		},
+		{
+			id: 4,
+			title: "원피스",
+		},
+	];
 	const search = (event) => {
 		if (event.key === "Enter") {
 			let keyword = event.target.value; //js와 다름 event안에 value가 들어있음
@@ -33,7 +53,7 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			<div className="sideMenu" style={{ left: sideState }}>
 				<ul className="sideMenuList">
 					{menuList.map((menu) => (
-						<li>{menu}</li>
+						<li key={menu.id}>{menu.title}</li>
 					))}
 				</ul>
 				<div
@@ -83,7 +103,7 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			<nav>
 				<ul className="menuList">
 					{menuList.map((menu) => (
-						<li>{menu}</li>
+						<li key={menu.id}>{menu.title}</li>
 					))}
 				</ul>
 			</nav>
