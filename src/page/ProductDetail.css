@@ -48,3 +48,22 @@ button {
   background-color: inherit;
   border-color: inherit;
 }
+
+.detailPage .mobileDetail {
+  display: none;
+}
+.detailPage img {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .detailPage .pcDetail {
+    display: none;
+  }
+  .detailPage .mobileDetail {
+    display: block;
+  }
+}
+
+.detailPageImg {
+  width: 100%;
+}
