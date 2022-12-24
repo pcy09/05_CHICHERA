@@ -9,7 +9,7 @@ import { VscThreeBars, VscClose } from "react-icons/vsc";
 export default function Navbar({ authenticate, setAuthenticate }) {
 	const [sideState, setSideState] = useState("-105%");
 	const navigate = useNavigate();
-	const menuList = ["NEW", "BEST", "TOP", "BOTTOM", "원피스", "아우터", "SALE"];
+	const menuList = ["NEW", "BEST", "TOP", "BOTTOM", "원피스", "아우터"];
 
 	const search = (event) => {
 		if (event.key === "Enter") {
