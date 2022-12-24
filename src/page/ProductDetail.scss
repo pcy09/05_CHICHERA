@@ -1,5 +1,29 @@
-.detailImg {
-	width: 100%;
+.categoryMap {
+	padding-bottom: 20px;
+}
+.detailImgWrap {
+	position: relative;
+	.detailImg {
+		width: 100%;
+	}
+	.tagWrap {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		display: flex;
+		gap: 10px;
+		.new,
+		.choice {
+			font-size: 14px;
+			border-radius: 4px;
+			padding: 3px 6px;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.6);
+			@media (max-width: 550px) {
+				font-size: 12px;
+			}
+		}
+	}
 }
 .detailTitleWrap {
 	display: flex;
@@ -7,10 +31,12 @@
 	align-items: center;
 	height: 50px;
 	.detailTitle {
+		font-size: 20px;
 		font-weight: bold;
 	}
 	span.like {
 		cursor: pointer;
+		font-size: 20px;
 		.heartFill {
 			fill: var(--color-point);
 		}
@@ -18,29 +44,71 @@
 }
 
 .detailPrice {
-	font-size: 20px;
-}
-.new {
+	font-size: 30px;
+	font-weight: 900;
 	margin-top: 30px;
-	color: var(--color-gray);
 }
-.choice {
-	margin-top: 20px;
-	margin-bottom: 30px;
-}
-.detailDropdown {
-	margin-bottom: 20px;
-	& > * {
-		width: 100%;
+.detailComment {
+	display: flex;
+	padding: 35px 0;
+	p {
+		min-width: 120px;
 	}
 }
-button {
-	width: 100%;
+.detailOption {
+	display: flex;
+	align-items: center;
+	padding: 35px 0;
+	border-top: 1px solid #4c4c4c;
+	border-bottom: 1px solid #4c4c4c;
+
+	p {
+		min-width: 120px;
+	}
+	.detailDropdown {
+		border-radius: 0;
+		font-size: 14px;
+		padding: 0;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 10px;
+
+		.form-select:focus {
+			border-color: transparent;
+			box-shadow: none;
+		}
+	}
 }
-.btn:hover {
-	color: inherit;
-	background-color: inherit;
-	border-color: inherit;
+.detailTotalPrice {
+	display: flex;
+	justify-content: space-between;
+	padding: 35px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+.detailPurchase {
+	.buy {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		color: #fff;
+		background-color: #c2935f;
+	}
+	.basket {
+		margin-top: 2px;
+		display: flex;
+		height: 50px;
+		gap: 2px;
+		> div {
+			border: 1px solid #d4d4d4;
+			flex: 1;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
 
 .detailPage {
@@ -48,6 +116,7 @@ button {
 		display: none;
 	}
 	img {
+		padding-top: 50px;
 		width: 100%;
 	}
 	@media (max-width: 991px) {
@@ -58,7 +127,4 @@ button {
 			display: block;
 		}
 	}
-}
-.detailPageImg {
-	width: 100%;
 }

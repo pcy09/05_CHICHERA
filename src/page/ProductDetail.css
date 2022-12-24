@@ -1,5 +1,33 @@
-.detailImg {
+.categoryMap {
+  padding-bottom: 20px;
+}
+
+.detailImgWrap {
+  position: relative;
+}
+.detailImgWrap .detailImg {
   width: 100%;
+}
+.detailImgWrap .tagWrap {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+.detailImgWrap .tagWrap .new,
+.detailImgWrap .tagWrap .choice {
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 3px 6px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 550px) {
+  .detailImgWrap .tagWrap .new,
+.detailImgWrap .tagWrap .choice {
+    font-size: 12px;
+  }
 }
 
 .detailTitleWrap {
@@ -9,50 +37,90 @@
   height: 50px;
 }
 .detailTitleWrap .detailTitle {
+  font-size: 20px;
   font-weight: bold;
 }
 .detailTitleWrap span.like {
   cursor: pointer;
+  font-size: 20px;
 }
 .detailTitleWrap span.like .heartFill {
   fill: var(--color-point);
 }
 
 .detailPrice {
-  font-size: 20px;
-}
-
-.new {
+  font-size: 30px;
+  font-weight: 900;
   margin-top: 30px;
-  color: var(--color-gray);
 }
 
-.choice {
-  margin-top: 20px;
-  margin-bottom: 30px;
+.detailComment {
+  display: flex;
+  padding: 35px 0;
+}
+.detailComment p {
+  min-width: 120px;
 }
 
-.detailDropdown {
-  margin-bottom: 20px;
+.detailOption {
+  display: flex;
+  align-items: center;
+  padding: 35px 0;
+  border-top: 1px solid #4c4c4c;
+  border-bottom: 1px solid #4c4c4c;
 }
-.detailDropdown > * {
-  width: 100%;
+.detailOption p {
+  min-width: 120px;
+}
+.detailOption .detailDropdown {
+  border-radius: 0;
+  font-size: 14px;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.detailOption .detailDropdown .form-select:focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 
-button {
-  width: 100%;
+.detailTotalPrice {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.btn:hover {
-  color: inherit;
-  background-color: inherit;
-  border-color: inherit;
+.detailPurchase .buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  color: #fff;
+  background-color: #c2935f;
+}
+.detailPurchase .basket {
+  margin-top: 2px;
+  display: flex;
+  height: 50px;
+  gap: 2px;
+}
+.detailPurchase .basket > div {
+  border: 1px solid #d4d4d4;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .detailPage .mobileDetail {
   display: none;
 }
 .detailPage img {
+  padding-top: 50px;
   width: 100%;
 }
 @media (max-width: 991px) {
@@ -62,8 +130,4 @@ button {
   .detailPage .mobileDetail {
     display: block;
   }
-}
-
-.detailPageImg {
-  width: 100%;
 }

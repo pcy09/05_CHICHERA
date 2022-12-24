@@ -8,6 +8,7 @@
 			"price": "19,900",
 			"choice": true,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L"],
 			"category": "TOP"
 		},
@@ -19,6 +20,7 @@
 			"price": "19,950",
 			"choice": false,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "TOP"
 		},
@@ -30,6 +32,7 @@
 			"price": "36,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["32", "34", "34", "36", "38", "40", "42"],
 			"category": "TOP"
 		},
@@ -41,6 +44,7 @@
 			"price": "48,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["32", "34", "34", "36", "38", "40", "42"],
 			"category": "TOP"
 		},
@@ -52,6 +56,7 @@
 			"price": "24,900",
 			"choice": true,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "TOP"
 		},
@@ -63,6 +68,7 @@
 			"price": "33,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L", "XL"],
 			"category": "TOP"
 		},
@@ -74,6 +80,7 @@
 			"price": "34,900",
 			"choice": false,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "TOP"
 		},
@@ -85,6 +92,7 @@
 			"price": "22,900",
 			"choice": true,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["70AA", "70A", "75A", "70B", "80B", "75C"],
 			"category": "TOP"
 		},
@@ -96,6 +104,7 @@
 			"price": "32,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "BOTTOM"
 		},
@@ -107,6 +116,7 @@
 			"price": "39,900",
 			"choice": true,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "BOTTOM"
 		},
@@ -118,6 +128,7 @@
 			"price": "46,900",
 			"choice": false,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "BOTTOM"
 		},
@@ -129,6 +140,7 @@
 			"price": "42,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XXS", "XS", "S", "M", "L"],
 			"category": "BOTTOM"
 		},
@@ -140,6 +152,7 @@
 			"price": "39,810",
 			"choice": false,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XXS", "XS", "S", "M", "L"],
 			"category": "BOTTOM"
 		},
@@ -151,6 +164,7 @@
 			"price": "43,900",
 			"choice": true,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["S", "M", "L"],
 			"category": "BOTTOM"
 		},
@@ -162,6 +176,7 @@
 			"price": "38,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "BOTTOM"
 		},
@@ -173,6 +188,7 @@
 			"price": "19,950",
 			"choice": true,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "BOTTOM"
 		},
@@ -184,6 +200,7 @@
 			"price": "57,900",
 			"choice": false,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -195,6 +212,7 @@
 			"price": "28,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -206,6 +224,7 @@
 			"price": "39,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -217,6 +236,7 @@
 			"price": "66,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -228,6 +248,7 @@
 			"price": "47,900",
 			"choice": true,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -239,6 +260,7 @@
 			"price": "44,900",
 			"choice": false,
 			"new": true,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -250,6 +272,7 @@
 			"price": "45,900",
 			"choice": true,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		},
@@ -261,6 +284,7 @@
 			"price": "36,900",
 			"choice": false,
 			"new": false,
+			"color": ["Beige", "Ivory", "Black"],
 			"size": ["XS", "S", "M", "L", "XL"],
 			"category": "원피스"
 		}

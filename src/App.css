@@ -27,3 +27,8 @@ a {
 a:hover {
   color: inherit;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+}
