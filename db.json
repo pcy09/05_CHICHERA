@@ -8,8 +8,7 @@
 			"price": "39,900",
 			"choice": true,
 			"new": true,
-			"size": ["XS", "S", "M", "L"],
-			"menu": "best"
+			"size": ["XS", "S", "M", "L"]
 		},
 		{
 			"id": 1,
@@ -27,7 +26,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/032000001240.jpg?1670397397",
 			"title": "엘레나벨벳블라우스",
 			"price": "28,900",
-			"choice": false,
+			"choice": true,
 			"new": true,
 			"size": ["32", "34", "34", "36", "38", "40", "42"]
 		},
@@ -37,7 +36,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/039000002698.jpg?1669100942",
 			"title": "따숨_폴라긴팔티",
 			"price": "20,900",
-			"choice": false,
+			"choice": true,
 			"new": true,
 			"size": ["32", "34", "34", "36", "38", "40", "42"]
 		},
@@ -57,7 +56,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/039000002697.jpg?1669100869",
 			"title": "따숨_라운드긴팔티",
 			"price": "17,900",
-			"choice": false,
+			"choice": true,
 			"new": false,
 			"size": ["S", "M", "L", "XL"]
 		},
@@ -77,7 +76,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/039000002664.jpg?1667804383",
 			"title": "치즈모달폴라티",
 			"price": "24,900",
-			"choice": false,
+			"choice": true,
 			"new": true,
 			"size": ["70AA", "70A", "75A", "70B", "80B", "75C"]
 		},
@@ -87,7 +86,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/078000000310.jpg?1671179962",
 			"title": "미드나잇벨벳패딩",
 			"price": "77,900",
-			"choice": true,
+			"choice": false,
 			"new": true,
 			"size": ["S", "M", "L"]
 		},
@@ -107,8 +106,8 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/039000002699.jpg?1669101198",
 			"title": "소프트라쿤베이직니트",
 			"price": "43,900",
-			"choice": true,
-			"new": false,
+			"choice": false,
+			"new": true,
 			"size": ["S", "M", "L"]
 		},
 		{
@@ -117,7 +116,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/078000000312.jpg?1671086965",
 			"title": "무스탕배색구스다운",
 			"price": "138,900",
-			"choice": true,
+			"choice": false,
 			"new": true,
 			"size": ["XXS", "XS", "S", "M", "L"]
 		},
@@ -127,7 +126,7 @@
 			"img2": "http://www.chichera.co.kr/shopimages/chichera/039000002703.jpg?1669359412",
 			"title": "폭스홀가폴라니트",
 			"price": "67,900",
-			"choice": true,
+			"choice": false,
 			"new": true,
 			"size": ["XXS", "XS", "S", "M", "L"]
 		},
@@ -138,7 +137,7 @@
 			"title": "따숨_베이직슬리브리스티",
 			"price": "18,900",
 			"choice": false,
-			"new": false,
+			"new": true,
 			"size": ["S", "M", "L"]
 		},
 		{
@@ -148,7 +147,7 @@
 			"title": "블링펄루즈니트",
 			"price": "67,900",
 			"choice": false,
-			"new": false,
+			"new": true,
 			"size": ["XS", "S", "M", "L", "XL"]
 		}
 	]
