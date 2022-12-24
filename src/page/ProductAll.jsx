@@ -25,8 +25,8 @@ export default function ProductAll() {
 	useEffect(() => {
 		getProducts();
 	}, [query]); //키워드를 입력했을 때마다 getProducts 함수 실행
-	const best = productList.filter((item) => item.choice === true);
-	const newProduct = productList.filter((item) => item.new === true);
+	const best = productList.filter((item) => item?.choice === true);
+	const newProduct = productList.filter((item) => item?.new === true);
 	return (
 		<Container>
 			<h1>BEST</h1>
