@@ -87,7 +87,11 @@ export default function ProductDetail(item) {
 					</div>
 				</div>
 			</Container>
-			<img className="detailPageImg" src={product?.img3} alt="" />
+			<img
+				className="detailPageImg"
+				src={`../img/detailPage${id}.jpg`}
+				alt="상세페이지"
+			/>
 		</>
 	);
 }
