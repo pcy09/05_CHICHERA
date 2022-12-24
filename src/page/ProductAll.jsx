@@ -25,12 +25,21 @@ export default function ProductAll() {
 	useEffect(() => {
 		getProducts();
 	}, [query]); //키워드를 입력했을 때마다 getProducts 함수 실행
-	const best = productList.filter((item) => item.menu == "best");
+	const best = productList.filter((item) => item.choice === true);
+	const newProduct = productList.filter((item) => item.new === true);
 	return (
 		<Container>
 			<h1>BEST</h1>
 			<Row>
 				{best.map((item) => (
+					<Col xs={6} lg={3}>
+						<ProductCard item={item} />
+					</Col>
+				))}
+			</Row>
+			<h1>NEW</h1>
+			<Row>
+				{newProduct.map((item) => (
 					<Col xs={6} lg={3}>
 						<ProductCard item={item} />
 					</Col>
