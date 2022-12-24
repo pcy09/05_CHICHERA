@@ -9,17 +9,7 @@ import { VscThreeBars, VscClose } from "react-icons/vsc";
 export default function Navbar({ authenticate, setAuthenticate }) {
 	const [sideState, setSideState] = useState("-105%");
 	const navigate = useNavigate();
-	const menuList = [
-		"여성",
-		"Divided",
-		"남성",
-		"신생아/",
-		"아동",
-		"H&M HOME",
-		"스포츠",
-		"Sale",
-		"지속가능성",
-	];
+	const menuList = ["NEW", "BEST", "TOP", "BOTTOM", "원피스", "아우터", "SALE"];
 
 	const search = (event) => {
 		if (event.key === "Enter") {
@@ -64,9 +54,7 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			</div>
 			<div className="headerWrap">
 				<h1>
-					<Link to="/">
-						<img src="../img/logo.png" alt="chichera 로고" />
-					</Link>
+					<Link to="/">CHICHERA</Link>
 				</h1>
 				<div className="search">
 					<input

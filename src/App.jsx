@@ -4,10 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 import ProductAll from "./page/ProductAll";
 import Login from "./page/Login";
-import ProductDetail from "./page/ProductDetail";
 import PrivateRoute from "./route/PrivateRoute";
 import Navbar from "./components/Navbar";
-import { useNavigate } from "react-router-dom";
 
 /*
   1.전체상품페이지(대문페이지), 로그인, 상품 상세페이지

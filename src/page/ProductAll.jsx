@@ -25,8 +25,10 @@ export default function ProductAll() {
 	useEffect(() => {
 		getProducts();
 	}, [query]); //키워드를 입력했을 때마다 getProducts 함수 실행
+	console.log(productList);
 	return (
 		<Container>
+			<h1>모르겠다</h1>
 			<Row>
 				{productList.map((item) => (
 					<Col xs={6} lg={3}>

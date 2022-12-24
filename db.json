@@ -8,7 +8,8 @@
 			"price": "39,900",
 			"choice": true,
 			"new": true,
-			"size": ["XS", "S", "M", "L"]
+			"size": ["XS", "S", "M", "L"],
+			"menu": "best"
 		},
 		{
 			"id": 1,

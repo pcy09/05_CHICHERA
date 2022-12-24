@@ -1,0 +1,50 @@
+.ProductCard {
+  margin: 10px 0;
+}
+.ProductCard .imgContainer {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.ProductCard .imgContainer img {
+  width: 100%;
+}
+.ProductCard .imgContainer .itemBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ProductCard .imgContainer .itemBox .event {
+  background-color: #fff;
+  margin-bottom: 15px;
+  margin-left: 0;
+  font-size: 0.85rem;
+  display: inline-block;
+  padding: 0 5px;
+}
+.ProductCard .imgContainer .itemBox .new {
+  background-color: var(--color-point);
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  padding: 0 4px;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.ProductCard .imgContainer:hover {
+  transform: translate(0, -3px) scale(1.02);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.ProductCard .title {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.ProductCard .price {
+  color: black;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}

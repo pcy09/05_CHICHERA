@@ -22,7 +22,7 @@ export default function ProductCard({ item }) {
 				</div>
 			</div>
 			<div className="title">{item?.title}</div>
-			<div className="price">₩{item?.price}</div>
+			<div className="price">{item?.price}</div>
 		</div>
 	);
 }
