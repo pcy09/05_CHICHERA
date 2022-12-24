@@ -53,7 +53,9 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			<div className="sideMenu" style={{ left: sideState }}>
 				<ul className="sideMenuList">
 					{menuList.map((menu) => (
-						<li key={menu.id}>{menu.title}</li>
+						<Link to={`/category/${menu.title}`}>
+							<li key={menu.id}>{menu.title}</li>
+						</Link>
 					))}
 				</ul>
 				<div
@@ -103,7 +105,9 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			<nav>
 				<ul className="menuList">
 					{menuList.map((menu) => (
-						<li key={menu.id}>{menu.title}</li>
+						<Link to={`/category/${menu.title}`}>
+							<li key={menu.id}>{menu.title}</li>
+						</Link>
 					))}
 				</ul>
 			</nav>

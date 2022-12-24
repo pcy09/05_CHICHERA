@@ -64,6 +64,14 @@ export default function ProductDetail(item) {
 					</Button>
 				</Col>
 			</Row>
+			<img
+				src="http://www.chichera.co.kr/design/chichera/21_pc_re/22detail_benefit_pc.jpg"
+				alt="회원가입"
+			/>
+			<img
+				src="http://ftp.chichera.img13.kr/chichera_22/main/1122/de_pc_detail.jpg"
+				alt="이벤트"
+			/>
 		</Container>
 	);
 }

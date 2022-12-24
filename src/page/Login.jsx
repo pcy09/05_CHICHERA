@@ -17,14 +17,14 @@ export default function Login({ setAuthenticate }) {
 			<Form onSubmit={loginUser}>
 				<Form.Group className="mb-3" controlId="formBasicEmail">
 					<Form.Label>이메일</Form.Label>
-					<Form.Control type="email" placeholder="이메일을 입력해 주세요" />
+					<Form.Control type="email" placeholder="로그인 버튼을 눌러주세요!" />
 				</Form.Group>
 
 				<Form.Group className="mb-3" controlId="formBasicPassword">
 					<Form.Label>비밀번호</Form.Label>
 					<Form.Control
 						type="password"
-						placeholder="비밀번호를 입력해 주세요"
+						placeholder="로그인 버튼을 눌러주세요!"
 					/>
 				</Form.Group>
 

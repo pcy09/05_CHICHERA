@@ -77,7 +77,9 @@ export default function ProductAll() {
 				{productList
 					.filter((item) => index === item.category)
 					.map((item) => (
-						<div className="tabContent">{item.title}</div>
+						<Col key={item.id} xs={6} lg={4}>
+							<ProductCard item={item} />
+						</Col>
 					))}
 			</Row>
 		</Container>
