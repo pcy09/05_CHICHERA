@@ -4,12 +4,12 @@
   주소 뒤에 /?q=파라메터
 */
 
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { Container, Row, Col } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import "./ProductAll.scss";
+import SlickSlider from "../components/SlickSlider";
 
 export default function ProductAll() {
 	let [query, setQuery] = useSearchParams();
@@ -47,67 +47,72 @@ export default function ProductAll() {
 			title: "원피스",
 		},
 	];
-	return (
-		<Container>
-			{keyword ? (
-				<div>
-					<p className="keywordResult">
-						'{keyword}' 검색결과 총 {productList.length}개
-					</p>
-					{productList.length === 0 ? (
-						<p className="noResult">
-							검색된 상품이 없습니다 검색어를 변경해 보세요.
-						</p>
-					) : (
-						""
-					)}
-				</div>
-			) : null}
 
-			{productList.length === 0 ? (
-				""
-			) : (
-				<div>
-					<Row>
-						<h1>BEST</h1>
-						{best.map((item) => (
-							<Col key={item.id} xs={6} lg={3}>
-								<ProductCard item={item} />
-							</Col>
-						))}
-					</Row>
-					<Row>
-						<h1>NEW</h1>
-						{newProduct.map((item) => (
-							<Col key={item.id} xs={6} lg={3}>
-								<ProductCard item={item} />
-							</Col>
-						))}
-					</Row>
-					<Row>
-						<h1>카테고리</h1>
-						<ul className="tabMenu">
-							{menuList.map((item) => (
-								<li
-									key={item.id}
-									className={index === item.title ? "active" : null}
-									onClick={() => setIndex(item.title)}
-								>
-									{item.title}
-								</li>
-							))}
-						</ul>
-						{productList
-							.filter((item) => index === item.category)
-							.map((item) => (
-								<Col key={item.id} xs={6} lg={4}>
+	return (
+		<>
+			{keyword ? "" : <SlickSlider />}
+
+			<Container>
+				{keyword ? (
+					<div>
+						<p className="keywordResult">
+							'{keyword}' 검색결과 총 {productList.length}개
+						</p>
+						{productList.length === 0 ? (
+							<p className="noResult">
+								검색된 상품이 없습니다 검색어를 변경해 보세요.
+							</p>
+						) : (
+							""
+						)}
+					</div>
+				) : null}
+
+				{productList.length === 0 ? (
+					""
+				) : (
+					<div>
+						<Row>
+							<h1>BEST</h1>
+							{best.map((item) => (
+								<Col key={item.id} xs={6} lg={3}>
 									<ProductCard item={item} />
 								</Col>
 							))}
-					</Row>
-				</div>
-			)}
-		</Container>
+						</Row>
+						<Row>
+							<h1>NEW</h1>
+							{newProduct.map((item) => (
+								<Col key={item.id} xs={6} lg={3}>
+									<ProductCard item={item} />
+								</Col>
+							))}
+						</Row>
+						<Row>
+							<h1>CATEGORY</h1>
+							<ul className="tabMenu">
+								{menuList.map((item) => (
+									<li
+										key={item.id}
+										className={index === item.title ? "active" : null}
+										onClick={() => setIndex(item.title)}
+									>
+										{item.title}
+									</li>
+								))}
+							</ul>
+							{productList
+								.filter((item) => index === item.category)
+								.map((item) => (
+									<Col key={item.id} xs={6} lg={4}>
+										<ProductCard item={item} />
+									</Col>
+								))}
+						</Row>
+					</div>
+				)}
+			</Container>
+		</>
 	);
 }
 

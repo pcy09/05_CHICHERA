@@ -13,11 +13,7 @@ export default function ProductCard({ item }) {
 			<div className="imgContainer" onClick={showDetail}>
 				<img src={item?.img} alt="" />
 				<div className="itemBox">
-					{item?.choice === true ? (
-						<div className="event">Weekly Best Seller</div>
-					) : (
-						""
-					)}
+					{item?.choice === true ? <div className="event">Best</div> : ""}
 					{item?.new === true ? <div className="new">new</div> : ""}
 				</div>
 			</div>

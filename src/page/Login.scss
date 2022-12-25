@@ -1,7 +1,180 @@
 .loginArea {
-	max-width: 700px;
-	margin-top: 6vh;
+	min-height: 100vh;
 	@media (max-width: 991px) {
 		margin-top: 100px;
+	}
+	.loginGuide {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 900;
+		top: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation: guideAni 1.5s linear both;
+
+		@keyframes guideAni {
+			0% {
+				right: 0;
+			}
+			80% {
+				opacity: 1;
+			}
+			99% {
+				opacity: 0;
+				right: 0;
+			}
+			100% {
+				opacity: 0;
+				right: -100vw;
+			}
+		}
+		p {
+			border: 2px solid #fff;
+			padding: 40px 60px;
+			color: #fff;
+			font-size: 20px;
+		}
+	}
+	h2 {
+		font-size: 44px;
+		font-weight: 400;
+		text-align: center;
+		padding: 50px 0 100px;
+		@media (max-width: 991px) {
+			font-size: 30px;
+			padding: 20px 0 50px;
+		}
+	}
+
+	.loginForm {
+		border-top: 1px solid #d9d9d9;
+		border-bottom: 1px solid #d9d9d9;
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 60px 0;
+
+		.formWrap {
+			width: 500px;
+			.emailForm {
+				margin-bottom: 20px;
+			}
+			.emailForm,
+			.passwordForm {
+				display: flex;
+				width: 100%;
+				label {
+					width: 100px;
+					margin: 0;
+					padding: 0;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+				}
+				input {
+					flex: 1;
+					background-color: #f2f2f2;
+					border-radius: 0;
+					&::placeholder {
+						font-size: 14px;
+						color: #999;
+					}
+					&:focus {
+						background-color: #fff;
+						border: 1px solid #333;
+						box-shadow: none;
+						&::placeholder {
+							font-size: 0;
+						}
+					}
+				}
+			}
+			.checkWrap {
+				margin-top: 17px;
+				padding-left: 100px;
+
+				label {
+					font-size: 14px;
+					color: black;
+				}
+				input {
+					border: 1px solid #666;
+					border-radius: 50%;
+					&:valid:checked {
+						border: none;
+						background-color: #000;
+					}
+					&:valid:focus {
+						box-shadow: none;
+					}
+				}
+			}
+		}
+		.loginBtnWrap {
+			.loginBtn {
+				width: 190px;
+				height: 100px;
+				background-color: black;
+				border-radius: 0;
+				border: none;
+			}
+			.textWrap {
+				margin-top: 17px;
+				padding: 0 10px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				p {
+					flex: 1;
+					font-size: 12px;
+					text-align: center;
+					color: #777;
+					cursor: pointer;
+					&:nth-child(1) {
+						position: relative;
+						&::after {
+							content: "";
+							position: absolute;
+							width: 1px;
+							height: 70%;
+							right: 0;
+							top: 55%;
+							transform: translateY(-50%);
+							background-color: #777;
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: 991px) {
+			flex-direction: column;
+			align-items: center;
+			gap: 50px;
+			.formWrap {
+				width: 100%;
+				.emailForm,
+				.passwordForm {
+					label {
+						width: 80px;
+					}
+				}
+				.checkWrap {
+					padding-left: 80px;
+				}
+			}
+			.loginBtnWrap {
+				width: 100%;
+				.loginBtn {
+					width: 100%;
+					height: 50px;
+				}
+			}
+		}
 	}
 }

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import ProductCard from "../components/ProductCard";
-
+import "./Category.scss";
 export default function Category() {
 	let { id } = useParams();
 	const [categoryList, setCategoryList] = useState([]);
@@ -27,7 +27,7 @@ export default function Category() {
 	}
 
 	return (
-		<Container>
+		<Container className="categoryWrap">
 			<Row>
 				<h1>{id}</h1>
 				{categoryItem.map((item) => (

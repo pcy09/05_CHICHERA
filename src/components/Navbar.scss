@@ -83,6 +83,30 @@ $trigger1: "(max-width:991px)";
 	cursor: pointer;
 	display: flex;
 }
+.topBanner {
+	text-align: center;
+	height: 100px;
+	position: relative;
+	.textWrap {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		p {
+			color: #fff;
+		}
+		h2 {
+			color: #fff;
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	@media #{$trigger1} {
+		display: none;
+	}
+}
 .headerWrap {
 	display: flex;
 	align-items: center;
@@ -163,6 +187,12 @@ $trigger1: "(max-width:991px)";
 		z-index: 999;
 		background-color: #fff;
 	}
+	&.fixedPadding {
+		padding-bottom: 120px;
+		@media #{$trigger1} {
+			padding-bottom: 0;
+		}
+	}
 }
 
 nav {
@@ -170,10 +200,19 @@ nav {
 	justify-content: center;
 	align-items: center;
 	height: 55px;
-	margin-bottom: 50px;
 	background-color: #000;
+	position: relative;
 	@media #{$trigger1} {
 		display: none;
+	}
+	.imgWrap {
+		position: absolute;
+		left: 5%;
+		width: 100%;
+		display: none;
+		img {
+			width: 150px;
+		}
 	}
 	ul.menuList {
 		display: flex;
@@ -190,6 +229,16 @@ nav {
 			&:hover {
 				color: #04bd9e;
 			}
+		}
+	}
+	&.fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 9999;
+		height: 50px;
+		.imgWrap {
+			display: block;
 		}
 	}
 }

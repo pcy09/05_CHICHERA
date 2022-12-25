@@ -4,6 +4,7 @@
 :root {
 	--color-point: #c81e2b;
 	--color-gray: #666;
+	overflow-x: hidden;
 }
 
 body {
@@ -14,6 +15,13 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	color: #222;
+}
+ul,
+li,
+a,
+p {
+	margin: 0;
+	padding: 0;
 }
 li {
 	list-style: none;

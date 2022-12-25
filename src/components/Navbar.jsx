@@ -5,6 +5,7 @@ import { BsPersonCircle, BsSearch } from "react-icons/bs";
 import "./Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { VscThreeBars, VscClose } from "react-icons/vsc";
+import { useEffect } from "react";
 
 export default function Navbar({ authenticate, setAuthenticate }) {
 	const [sideState, setSideState] = useState("-105%");
@@ -49,6 +50,26 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			setAuthenticate(false);
 		}
 	};
+	const [scrollY, setScrollY] = useState(0);
+	const [scrollActive, setScrollActive] = useState(false);
+	function handleScroll() {
+		if (scrollY > 160) {
+			setScrollY(window.pageYOffset);
+			setScrollActive(true);
+		} else {
+			setScrollY(window.pageYOffset);
+			setScrollActive(false);
+		}
+	}
+	useEffect(() => {
+		function scrollListener() {
+			window.addEventListener("scroll", handleScroll);
+		} //  window 에서 스크롤을 감시 시작
+		scrollListener(); // window 에서 스크롤을 감시
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		}; //  window 에서 스크롤을 감시를 종료
+	});
 
 	return (
 		<div>
@@ -80,8 +101,14 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 					<VscClose className="closeBtn" />
 				</div>
 			</div>
-
-			<div className="headerWrap">
+			<div className="topBanner">
+				<div className="textWrap">
+					<p>따뜻함과 스타일을 동시에</p>
+					<h2>WINTER SALE</h2>
+				</div>
+				<img src="../img/topBanner.jpg" alt="상단배너" />
+			</div>
+			<div className={scrollActive ? "headerWrap fixedPadding" : "headerWrap"}>
 				<div className="burgerMenu hide">
 					<VscThreeBars
 						onClick={() => {
@@ -94,6 +121,7 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 				</h1>
 				<div className="search">
 					<input
+						placeholder="지금 '윈터세일'을 검색하세요"
 						type="text"
 						onKeyPress={(event) => {
 							search(event);
@@ -116,7 +144,12 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 				</div>
 			</div>
 
-			<nav>
+			<nav className={scrollActive ? "fixed" : ""}>
+				<div className="imgWrap">
+					<Link to="/">
+						<img src="img/logo_white.png" alt="" />
+					</Link>
+				</div>
 				<ul className="menuList">
 					{menuList.map((menu) => (
 						<Link to={`/category/${menu.title}`}>
