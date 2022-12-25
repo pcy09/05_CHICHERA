@@ -7,6 +7,7 @@ import Login from "./page/Login";
 import PrivateRoute from "./route/PrivateRoute";
 import Navbar from "./components/Navbar";
 import Category from "./page/Category";
+import Footer from "./components/Footer";
 
 /*
   1.전체상품페이지(대문페이지), 로그인, 상품 상세페이지
@@ -45,11 +46,9 @@ function App() {
 					path="product/:id"
 					element={<PrivateRoute authenticate={authenticate} />}
 				/>
-				<Route
-					path="category/:id"
-					element={<Category authenticate={authenticate} />}
-				/>
+				<Route path="category/:id" element={<Category />} />
 			</Routes>
+			<Footer />
 		</>
 	);
 }

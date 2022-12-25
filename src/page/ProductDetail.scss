@@ -46,7 +46,10 @@
 .detailPrice {
 	font-size: 30px;
 	font-weight: 900;
-	margin-top: 30px;
+	padding-top: 30px;
+	@media (max-width: 767px) {
+		padding-top: 0;
+	}
 }
 .detailComment {
 	display: flex;
@@ -54,14 +57,21 @@
 	p {
 		min-width: 120px;
 	}
+	@media (max-width: 767px) {
+		padding: 20px 0;
+	}
 }
 .detailOption {
-	display: flex;
-	align-items: center;
 	padding: 35px 0;
 	border-top: 1px solid #4c4c4c;
 	border-bottom: 1px solid #4c4c4c;
-
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	.detailOptionGroup {
+		display: flex;
+		align-items: center;
+	}
 	p {
 		min-width: 120px;
 	}
@@ -72,11 +82,13 @@
 		height: 30px;
 		line-height: 30px;
 		padding-left: 10px;
-
-		.form-select:focus {
-			border-color: transparent;
-			box-shadow: none;
-		}
+	}
+	.form-select:focus {
+		border: 1px solid #ced4da;
+		box-shadow: none;
+	}
+	@media (max-width: 767px) {
+		padding: 20px 0;
 	}
 }
 .detailTotalPrice {
@@ -85,6 +97,9 @@
 	padding: 35px 0;
 	font-size: 20px;
 	font-weight: bold;
+	@media (max-width: 767px) {
+		padding: 20px 0;
+	}
 }
 .detailPurchase {
 	.buy {
@@ -94,8 +109,10 @@
 		height: 50px;
 		color: #fff;
 		background-color: #c2935f;
+		cursor: pointer;
 	}
 	.basket {
+		cursor: pointer;
 		margin-top: 2px;
 		display: flex;
 		height: 50px;
@@ -114,10 +131,17 @@
 .detailPage {
 	.mobileDetail {
 		display: none;
+		cursor: pointer;
+	}
+	.pcDetail {
+		cursor: pointer;
 	}
 	img {
 		padding-top: 50px;
 		width: 100%;
+		@media (max-width: 767px) {
+			padding-top: 20px;
+		}
 	}
 	@media (max-width: 991px) {
 		.pcDetail {

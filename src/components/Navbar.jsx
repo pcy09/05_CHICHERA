@@ -36,6 +36,8 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 			let keyword = event.target.value; //js와 다름 event안에 value가 들어있음
 			navigate(`/?q=${keyword}`);
 			// 추가조건은 쿼리로 붙임, 키워드를 읽어와서 url에 넣어줌
+			setSideState("-105%");
+			event.target.value = "";
 		}
 	};
 	const gotoLogin = () => {
@@ -51,13 +53,24 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 	return (
 		<div>
 			<div className="sideMenu" style={{ left: sideState }}>
-				<ul className="sideMenuList">
-					{menuList.map((menu) => (
-						<Link to={`/category/${menu.title}`}>
-							<li key={menu.id}>{menu.title}</li>
-						</Link>
-					))}
-				</ul>
+				<div className="sideMenuList">
+					<ul>
+						{menuList.map((menu) => (
+							<Link to={`/category/${menu.title}`}>
+								<li key={menu.id}>{menu.title}</li>
+							</Link>
+						))}
+					</ul>
+					<div className="mSearch">
+						<input
+							type="text"
+							onKeyPress={(event) => {
+								search(event);
+							}}
+						/>
+						<BsSearch />
+					</div>
+				</div>
 				<div
 					className="closeBtnWrap"
 					onClick={() => {
@@ -67,14 +80,15 @@ export default function Navbar({ authenticate, setAuthenticate }) {
 					<VscClose className="closeBtn" />
 				</div>
 			</div>
-			<div className="burgerMenu hide">
-				<VscThreeBars
-					onClick={() => {
-						setSideState("0");
-					}}
-				/>
-			</div>
+
 			<div className="headerWrap">
+				<div className="burgerMenu hide">
+					<VscThreeBars
+						onClick={() => {
+							setSideState("0");
+						}}
+					/>
+				</div>
 				<h1>
 					<Link to="/">CHICHERA</Link>
 				</h1>

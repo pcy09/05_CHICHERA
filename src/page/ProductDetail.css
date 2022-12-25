@@ -51,7 +51,12 @@
 .detailPrice {
   font-size: 30px;
   font-weight: 900;
-  margin-top: 30px;
+  padding-top: 30px;
+}
+@media (max-width: 767px) {
+  .detailPrice {
+    padding-top: 0;
+  }
 }
 
 .detailComment {
@@ -61,13 +66,23 @@
 .detailComment p {
   min-width: 120px;
 }
+@media (max-width: 767px) {
+  .detailComment {
+    padding: 20px 0;
+  }
+}
 
 .detailOption {
-  display: flex;
-  align-items: center;
   padding: 35px 0;
   border-top: 1px solid #4c4c4c;
   border-bottom: 1px solid #4c4c4c;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.detailOption .detailOptionGroup {
+  display: flex;
+  align-items: center;
 }
 .detailOption p {
   min-width: 120px;
@@ -80,9 +95,14 @@
   line-height: 30px;
   padding-left: 10px;
 }
-.detailOption .detailDropdown .form-select:focus {
-  border-color: transparent;
+.detailOption .form-select:focus {
+  border: 1px solid #ced4da;
   box-shadow: none;
+}
+@media (max-width: 767px) {
+  .detailOption {
+    padding: 20px 0;
+  }
 }
 
 .detailTotalPrice {
@@ -91,6 +111,11 @@
   padding: 35px 0;
   font-size: 20px;
   font-weight: bold;
+}
+@media (max-width: 767px) {
+  .detailTotalPrice {
+    padding: 20px 0;
+  }
 }
 
 .detailPurchase .buy {
@@ -122,6 +147,11 @@
 .detailPage img {
   padding-top: 50px;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .detailPage img {
+    padding-top: 20px;
+  }
 }
 @media (max-width: 991px) {
   .detailPage .pcDetail {

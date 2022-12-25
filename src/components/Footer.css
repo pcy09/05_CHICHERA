@@ -1,0 +1,48 @@
+footer {
+  padding-top: 150px;
+}
+footer .footerNav {
+  background-color: #848484;
+}
+footer .footerNav ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+footer .footerNav ul li {
+  color: #fff;
+  line-height: 57px;
+  font-size: 14px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+footer address {
+  padding: 40px 10px;
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 50px;
+  align-items: center;
+}
+footer address .logoWrap img {
+  width: 150px;
+}
+footer address p {
+  color: #666;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (max-width: 800px) {
+  footer address {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer address .logoWrap img {
+    width: 100px;
+  }
+  footer address p {
+    font-size: 12px;
+  }
+}

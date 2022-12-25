@@ -54,17 +54,36 @@ export default function ProductDetail(item) {
 							<p>3,000원 (50,000원 이상 무료배송)</p>
 						</div>
 						<div className="detailOption">
-							<p>사이즈</p>
-							<Form.Select
-								className="detailDropdown"
-								aria-label="Default select example"
-							>
-								<option>옵션 선택</option>
-								{product?.size.length > 0 &&
-									product.size.map((item) => (
-										<option value={product?.size.indexOf(item)}>{item}</option>
-									))}
-							</Form.Select>
+							<div className="detailOptionGroup">
+								<p>컬러</p>
+								<Form.Select
+									className="detailDropdown"
+									aria-label="Default select example"
+								>
+									<option>옵션 선택</option>
+									{product?.color.length > 0 &&
+										product.color.map((item) => (
+											<option value={product?.color.indexOf(item)}>
+												{item}
+											</option>
+										))}
+								</Form.Select>
+							</div>
+							<div className="detailOptionGroup">
+								<p>사이즈</p>
+								<Form.Select
+									className="detailDropdown"
+									aria-label="Default select example"
+								>
+									<option>옵션 선택</option>
+									{product?.size.length > 0 &&
+										product.size.map((item) => (
+											<option value={product?.size.indexOf(item)}>
+												{item}
+											</option>
+										))}
+								</Form.Select>
+							</div>
 						</div>
 						<div className="detailTotalPrice">
 							<p>총 상품 금액</p>

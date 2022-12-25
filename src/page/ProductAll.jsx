@@ -16,8 +16,9 @@ export default function ProductAll() {
 	//주소 뒤 파라메터
 	const [productList, setProductList] = useState([]);
 	const [index, setIndex] = useState("TOP");
+	let keyword = query.get("q") || "";
+
 	const getProducts = async () => {
-		let keyword = query.get("q") || "";
 		// 쿼리값을 읽어 온다 / q의 밸류(아이템을 가져온다) / 없을땐 빈 스트링
 		let url = `https://my-json-server.typicode.com/pcy09/05_SPA01/products?q=${keyword}`;
 		let response = await fetch(url); //fetch - 네트워크에 요청을 보내고 프로미스 객체가 반환
@@ -26,9 +27,12 @@ export default function ProductAll() {
 	};
 	useEffect(() => {
 		getProducts();
+		console.log(keyword);
 	}, [query]); //키워드를 입력했을 때마다 getProducts 함수 실행
 	const best = productList.filter((item) => item?.choice === true);
 	const newProduct = productList.filter((item) => item?.new === true);
+	console.log(productList.length);
+
 	const menuList = [
 		{
 			id: 0,
@@ -45,43 +49,64 @@ export default function ProductAll() {
 	];
 	return (
 		<Container>
-			<Row>
-				<h1>BEST</h1>
-				{best.map((item) => (
-					<Col key={item.id} xs={6} lg={3}>
-						<ProductCard item={item} />
-					</Col>
-				))}
-			</Row>
-			<Row>
-				<h1>NEW</h1>
-				{newProduct.map((item) => (
-					<Col key={item.id} xs={6} lg={3}>
-						<ProductCard item={item} />
-					</Col>
-				))}
-			</Row>
-			<Row>
-				<h1>카테고리</h1>
-				<ul className="tabMenu">
-					{menuList.map((item) => (
-						<li
-							key={item.id}
-							className={index === item.title ? "active" : null}
-							onClick={() => setIndex(item.title)}
-						>
-							{item.title}
-						</li>
-					))}
-				</ul>
-				{productList
-					.filter((item) => index === item.category)
-					.map((item) => (
-						<Col key={item.id} xs={6} lg={4}>
-							<ProductCard item={item} />
-						</Col>
-					))}
-			</Row>
+			{keyword ? (
+				<div>
+					<p className="keywordResult">
+						'{keyword}' 검색결과 총 {productList.length}개
+					</p>
+					{productList.length === 0 ? (
+						<p className="noResult">
+							검색된 상품이 없습니다 검색어를 변경해 보세요.
+						</p>
+					) : (
+						""
+					)}
+				</div>
+			) : null}
+
+			{productList.length === 0 ? (
+				""
+			) : (
+				<div>
+					<Row>
+						<h1>BEST</h1>
+						{best.map((item) => (
+							<Col key={item.id} xs={6} lg={3}>
+								<ProductCard item={item} />
+							</Col>
+						))}
+					</Row>
+					<Row>
+						<h1>NEW</h1>
+						{newProduct.map((item) => (
+							<Col key={item.id} xs={6} lg={3}>
+								<ProductCard item={item} />
+							</Col>
+						))}
+					</Row>
+					<Row>
+						<h1>카테고리</h1>
+						<ul className="tabMenu">
+							{menuList.map((item) => (
+								<li
+									key={item.id}
+									className={index === item.title ? "active" : null}
+									onClick={() => setIndex(item.title)}
+								>
+									{item.title}
+								</li>
+							))}
+						</ul>
+						{productList
+							.filter((item) => index === item.category)
+							.map((item) => (
+								<Col key={item.id} xs={6} lg={4}>
+									<ProductCard item={item} />
+								</Col>
+							))}
+					</Row>
+				</div>
+			)}
 		</Container>
 	);
 }
