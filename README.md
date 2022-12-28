@@ -1,4 +1,4 @@
-![project03](https://user-images.githubusercontent.com/110226576/209346368-dfca3679-7296-43d4-858c-adf22fda3feb.png)
+![project03](https://user-images.githubusercontent.com/110226576/209822860-1996ed6c-da0e-419e-ac08-01770da23e5a.png)
 
 # CHICHERA (SPA_react)
 시크헤라 쇼핑몰 리뉴얼 반응형 spa 사이트
